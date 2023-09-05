@@ -1,20 +1,19 @@
-import BasicExample from "./components/NavBarComponent";
-import ItemListContainer from "./components/ItemListContainer";
+import MainLayout from "./layout/MainLayout";
+
 import "./App.css";
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 
 
 function App() {
 return(
-    <div className="header">
-  <BasicExample/>
+  <MainLayout>
+      
+ </MainLayout>
+      
 
-  <ItemListContainer greeting="Bienvenidos a J HAppliances! Los mejores electrodomésticos para tu hogar"/>
- 
-</div>
  )
   }
 export default App
