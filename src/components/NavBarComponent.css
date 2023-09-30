@@ -1,0 +1,42 @@
+
+.navegador{
+    background-color: rgba(169, 169, 169, 0.872) !important;
+    height: 10vh;
+}
+.tittle{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+color: black;
+width: 30%;
+}
+.tittle img{
+    width: 50%;
+    margin: 10px;
+}
+.tittle-container{
+    width: 25%;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.inicio{color: black ;
+    text-decoration: none;
+    font-size: larger;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.category{
+    color: black;
+    text-decoration: none;
+}
+

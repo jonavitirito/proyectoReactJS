@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.carrito{
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+    
+}
+.main{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+   height: 100%;
+   background-color: rgba(229, 229, 229, 0.808);
+}
+.main-product{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card{ 
+    height: min-content !important;
+    margin: 15px;
+   align-content: center !important;
+    width: 20vw;
+    align-items: center;
+    
+   
+    
+    
+}
+.card img{
+    width: 45%;
+}
+.card a{display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.card-body{
+    text-align: center;
+    
+}
+.card-container{
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+    background-color: rgba(229, 229, 229, 0.808);
+}
+
+.footer{
+    bottom: 0;
+    background-color: rgba(217, 217, 217, 0.872);
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+.footer ul{
+    display: flex;
+}
+.footer ul li{
+   list-style-type: none;
+   padding: 20px;
+}
+.main-filtered{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+}
+.button-remove{
+    margin: 5px;
+background-color: rgba(75, 75, 75, 0.607);
+width: 10%;
+text-align: center;
+border-radius: 5px;
+transition: 0.4s ease-out;
+
+
+&:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: rgb(172, 172, 172);
+    
+}
+}
+.button-add{
+    margin: 5px;
+    background-color: rgba(75, 75, 75, 0.607);
+width: 10%;
+text-align: center;
+border-radius: 5px;
+transition: 0.4s ease-out;
+
+
+&:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: rgb(172, 172, 172);
+    
+}
+}

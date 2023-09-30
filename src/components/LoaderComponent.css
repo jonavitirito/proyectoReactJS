@@ -1,0 +1,20 @@
+.loader-component{
+    animation-name: animacion;
+    animation-duration: 1s;
+   height: 30%;
+   
+ 
+}
+.loader-container{    
+   height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes animacion{
+    form{
+        transform: rotate(180deg)
+    } to {
+        transform: rotate(-180deg)
+    }
+}

@@ -1,21 +1,25 @@
 import React from 'react';
 import MainRouter from '../routes/MainRouter';
 import Footer from '../components/FooterComponent';
-import "../App.css";
+import "../App.scss";
 
 
 
 
 
-const MainLayout = () => {
+const MainLayout = ({children}) => {
   return (
     <div>
+      <main>
+        {children}
       <MainRouter>
 
       </MainRouter>
       <Footer>
 
       </Footer>
+      
+      </main>
    </div>
   )
 }

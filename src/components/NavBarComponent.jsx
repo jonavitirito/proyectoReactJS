@@ -5,29 +5,34 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import CardWidget from './CardWidgetComponent';
 import { Link } from 'react-router-dom';
 import "./NavBarComponent.css";
-
+import UseCollection from '../hooks/UseCollection';
+import React from 'react';
 
 
 function NavBar() {
+  const {products, loading}= UseCollection("categories");
+ console.log(products)
   return (
    
     <Navbar expand="lg" className="bg-body-tertiary navegador">
       <Container>
-        <Navbar.Brand className='title'> <Link to="/">J HAppliances </Link> </Navbar.Brand>
+        <Navbar.Brand className='tittle-container'> <Link to="/" className='tittle'><div><img src="https://cdn-icons-png.flaticon.com/512/998/998779.png" alt="#" />JHAppliances</div> </Link> </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Item><Link to="/">Inicio</Link> </Nav.Item>
-            <NavDropdown title="Productos" id="basic-nav-dropdown" className='categorias'>
-              <NavDropdown.Item > <Link to="/category/Heladeras">Heladeras</Link></NavDropdown.Item>
-              <NavDropdown.Item > <Link to="/category/Lavarropas">
-                Lavarropas</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item > <Link to="/category/Cocinas">Cocinas</Link></NavDropdown.Item>
-              <NavDropdown.Item > <Link to="/category/Termotanques">
-                Termotanques</Link>
-              </NavDropdown.Item>
-            </NavDropdown>
+        <Navbar.Collapse id="basic-navbar-nav" className='nav-container'>
+          <Nav className="me-auto" >
+            <Nav.Item><Link to="/" className='inicio'>Inicio</Link> </Nav.Item>
+            {loading ? null : (
+              <NavDropdown title="Productos" id="basic-nav-dropdown" className='products'>
+                {products[0].name.map((category, index) => {
+                  return (
+                    <NavDropdown.Item key={index} >
+                      <Link to={`/category/${category}`} className='category'>{category}</Link>
+                    </NavDropdown.Item>
+                  );
+                })}
+              </NavDropdown>
+            )}
+
           </Nav>
         </Navbar.Collapse>
         <CardWidget/>

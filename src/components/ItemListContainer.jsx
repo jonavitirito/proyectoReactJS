@@ -1,30 +1,35 @@
-import "./ItemListContainer.css";
+
+import React from 'react';
  import Button from 'react-bootstrap/Button';
   import Card from 'react-bootstrap/Card';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 
 
-  const ItemListContainer =({productsData})=>{
-    return(
-      
-        productsData.map((item)=>{
+const ItemListContainer =({productsData})=>{
+    return (
+productsData.map((products)=>{
             return (
-           <Link to={`/item/${item.id}`}> <Card className="card">
-              <img src={item.imagen} alt="#"/>
-               
+              <div key={products.id}>
+            <Card className="card">
+           <Link to={`/item/${products.id}`}> <img src={products.img} alt="#"/></Link>
               <Card.Body>
-                <Card.Title>{item.nombre}</Card.Title>
+                <Card.Title>{products.name}</Card.Title>
                 <Card.Text>
-                  {item.precio}
+                  ${products.price}
                 </Card.Text>
-                <Button variant="primary">Añadir a Carrito</Button>
+                <p>
+                  {products.description}
+                </p>
+                <Button variant="secondary">Añadir a Carrito</Button>
               </Card.Body>
-            </Card></Link>
+            </Card>
+            </div>
             )
             })
-          );
+           )
+          ;
        
     
  }
